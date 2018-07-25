@@ -1,0 +1,20 @@
+{
+  "name": "stockexchange",
+  "version": "1.0.0",
+  "description": "Backend for stock excnhage",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node app.js --presets es2015,stage-2"
+  },
+  "author": "Dzhambulat Khasayev",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
+  },
+  "dependencies": {
+    "node-priority-queue": "^1.0.0"
+  }
+}
