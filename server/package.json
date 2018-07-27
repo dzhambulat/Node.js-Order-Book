@@ -15,6 +15,7 @@
     "babel-preset-stage-2": "^6.24.1"
   },
   "dependencies": {
-    "node-priority-queue": "^1.0.0"
+    "node-priority-queue": "^1.0.0",
+    "priorityqueue": "^0.2.1"
   }
 }
