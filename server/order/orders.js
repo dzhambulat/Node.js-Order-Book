@@ -1,13 +1,16 @@
 import PriorityQueue from 'priorityqueue';
+import EventEmmiter from 'events';
+
 export class OrderError
 {
 
 }
 
-export class Orders
+export class Orders extends EventEmmiter
 {
     
     constructor() {
+        super();
         console.log("Orders");
         this.sell_orders = PriorityQueue({comparator: (a, b)=>
             b.price - a.price 
@@ -67,7 +70,9 @@ export class Orders
             throw new OrderError();
         }
         this.sell_orders.push(order);
-        return this.makeExchange();
+        process.nextTick(function (data) {
+            this.emit('processed',data);
+        }.bind(this) , this.makeExchange());
     }
 
     putBuyOrder(order) {
@@ -76,7 +81,9 @@ export class Orders
             throw new OrderError();
         }
         this.buy_orders.push(order);
-        return this.makeExchange();
+        process.nextTick(function (data) {
+            this.emit('processed',data);
+        }.bind(this) , this.makeExchange());
 
     }
 }
