@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "node-priority-queue": "^1.0.0",
-    "priorityqueue": "^0.2.1"
+    "priorityqueue": "^0.2.1",
+    "socket.io": "^2.1.1"
   }
 }
