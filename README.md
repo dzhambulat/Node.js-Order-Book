@@ -1,2 +1,2 @@
 # StockExchange
-Stock exchange for fast trading Ethereum tokens
+Stock exchange order book which can be used in Stock Exchange implementation. 
